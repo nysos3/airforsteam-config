@@ -37,8 +37,8 @@
     "watch": "babel lib --out-dir lib-es5 --watch"
   },
   "lint-staged": {
-    "*.js": [
-      "eslint --ext .js --ignore-path .gitignore . --fix",
+    "*.{js}": [
+      "eslint --ext .js --ignore-path .gitignore ./lib/ --fix",
       "git add"
     ]
   },
