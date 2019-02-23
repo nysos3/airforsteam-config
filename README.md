@@ -42,7 +42,7 @@ npx airforsteam --help
  - [dylang](dylang)'s [npm-check](https://github.com/dylang/npm-check/) for inspiration into best practices for CLI development, as this is my first public/polished CLI.
 
 ## TODO
- - Test on Windows
+ - Test Windows more extensively
 
 ## License
 Yeah, I don't pretend to understand legalese, so I've mimicked the same license, CC-BY-NC-4.0, used by [Air for Steam](https://github.com/airforsteam/Air-for-Steam/blob/813c437397f75f79672f29b98cce2741b3fa351e/LICENSE.txt)
