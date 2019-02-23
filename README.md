@@ -15,15 +15,26 @@ Also, copying files on mac is awful.
 ## Requirements
 [Node](https://nodejs.org/en/)
 
-### Run without installing
+#### Windows
+Windows users may also need to run the following from an elevated command prompt.
+It is entirely possible that you may not need this step. For more information, see [here](https://www.npmjs.com/package/windows-build-tools).
+```bash
+npm install -g --production windows-build-tools
+```
+
+### Install
+```bash
+npm i -g airforsteam
+```
+
+### Run
 ```bash
 npx airforsteam
 ```
 
-### Install and run
+Available options may be viewed by running the help command.
 ```bash
-npm i -g airforsteam
-airforsteam
+npx airforsteam --help
 ```
 
 ### Credits
