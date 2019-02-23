@@ -1,0 +1,20 @@
+{
+  "cSpell.words": [
+    "airforsteam",
+    "callsite",
+    "deeppurple",
+    "emojify",
+    "gmail",
+    "mamulokki",
+    "repos",
+    "spotify",
+    "steamblue",
+    "tada",
+    "unselectable",
+    "youtubered"
+  ],
+  "files.exclude": {
+    "**/lib-es5": true
+  },
+  "eslint.enable": true,
+}
