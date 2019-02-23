@@ -22,6 +22,15 @@ It is entirely possible that you may not need this step. For more information, s
 npm install -g --production windows-build-tools
 ```
 
+#### macOS
+Honestly, as far as I'm aware this tool should work out of the box. If you run into issues running or installing this tool on macOS, please [open an issue](https://github.com/nysos3/airforsteam-cli/issues) and provide details so that I may update this readme.
+
+#### Linux
+On Linux, you also may need to install the libfontconfig-dev package, for example:
+```bash
+sudo apt-get install libfontconfig-dev
+```
+
 ## Install
 ```bash
 npm i -g airforsteam
