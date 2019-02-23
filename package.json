@@ -28,6 +28,10 @@
     "lint": "npx eslint --ext .js --ignore-path .gitignore .",
     "lint:fix": "npx eslint --ext .js --ignore-path .gitignore . --fix",
     "prepublishOnly": "npm run transpile",
+    "release": "standard-version --release-as patch",
+    "postrelease": "git push --follow-tags && npm publish",
+    "release:major": "standard-version --release-as major && npm run postrelease",
+    "release:minor": "standard-version --release-as minor && npm run postrelease",
     "test": "echo \"Error: no test specified\" && exit 1",
     "transpile": "babel lib --out-dir lib-es5",
     "watch": "babel lib --out-dir lib-es5 --watch"
