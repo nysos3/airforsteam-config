@@ -1,6 +1,6 @@
 {
   "name": "airforsteam",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An unofficial Air-for-Steam CLI with interactive configuration and updating of the Air-for-Steam skin",
   "homepage": "https://github.com/nysos3/airforsteam-cli",
   "bugs": {
