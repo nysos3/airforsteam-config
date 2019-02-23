@@ -38,7 +38,7 @@
   },
   "lint-staged": {
     "*.{js}": [
-      "eslint --ext .js --ignore-path .gitignore ./lib/ --fix",
+      "npx eslint --ext .js --ignore-path .gitignore --fix",
       "git add"
     ]
   },
@@ -80,7 +80,6 @@
     "yorkie": "^2.0.0"
   },
   "gitHooks": {
-    "pre-commit": "npx sort-package-json && npx lint-staged",
     "post-merge": "git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD | grep --quiet 'package-lock.json' && npm install || exit 0",
     "commit-msg": "standard-commithook"
   },
