@@ -75,7 +75,7 @@
     "yorkie": "^2.0.0"
   },
   "gitHooks": {
-    "pre-commit": "npx sort-package-json && npx lint-staged && (bash ./hooks/pre-commit.sh || exit 0)",
+    "pre-commit": "npx sort-package-json && npx lint-staged",
     "post-merge": "git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD | grep --quiet 'package-lock.json' && npm install || exit 0",
     "commit-msg": "standard-commithook"
   },

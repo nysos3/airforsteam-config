@@ -5,6 +5,9 @@
 
 > An unofficial Air-for-Steam CLI with interactive configuration and updating of the Air-for-Steam skin
 
+<img width="800" alt="airforsteam-cli" src="https://github.com/nysos3/airforsteam-cli/blob/master/assets/showcase.gif?raw=true">
+
+
 ## Requirements
 [Node](https://nodejs.org/en/)
 
