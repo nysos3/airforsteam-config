@@ -7,7 +7,7 @@
 
 <img width="800" alt="airforsteam-cli" src="https://github.com/nysos3/airforsteam-cli/blob/master/assets/showcase.gif?raw=true">
 
-### Why?
+#### Why?
 I got tired of applying my desired theme options after each update of the skin.
 
 Also, copying files on mac is awful.
@@ -22,12 +22,12 @@ It is entirely possible that you may not need this step. For more information, s
 npm install -g --production windows-build-tools
 ```
 
-### Install
+## Install
 ```bash
 npm i -g airforsteam
 ```
 
-### Run
+## Run
 ```bash
 npx airforsteam
 ```
@@ -37,14 +37,14 @@ Available options may be viewed by running the help command.
 npx airforsteam --help
 ```
 
-### Credits
+## Credits
  - Clearly, credits to the team behind [Air for Steam](https://github.com/airforsteam/Air-for-Steam)
  - [dylang](dylang)'s [npm-check](https://github.com/dylang/npm-check/) for inspiration into best practices for CLI development, as this is my first public/polished CLI.
 
-### TODO
+## TODO
  - Test on Windows
 
-### License
-Yeah I don't pretend to understand legalese, so I've mimicked the same license, CC-BY-NC-4.0, used by [Air for Steam](https://github.com/airforsteam/Air-for-Steam/blob/813c437397f75f79672f29b98cce2741b3fa351e/LICENSE.txt)
+## License
+Yeah, I don't pretend to understand legalese, so I've mimicked the same license, CC-BY-NC-4.0, used by [Air for Steam](https://github.com/airforsteam/Air-for-Steam/blob/813c437397f75f79672f29b98cce2741b3fa351e/LICENSE.txt)
 
 Screenshots are [CC BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/)
