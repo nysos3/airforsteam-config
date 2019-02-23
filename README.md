@@ -7,6 +7,10 @@
 
 <img width="800" alt="airforsteam-cli" src="https://github.com/nysos3/airforsteam-cli/blob/master/assets/showcase.gif?raw=true">
 
+### Why?
+I got tired of applying my desired theme options after each update of the skin.
+
+Also, copying files on mac is awful.
 
 ## Requirements
 [Node](https://nodejs.org/en/)
