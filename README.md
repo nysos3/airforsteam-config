@@ -1,7 +1,7 @@
 # airforsteam-cli
 [![NPM version](https://badge.fury.io/js/airforsteam.svg)](http://badge.fury.io/js/airforsteam)
 [![Dependency Status](https://img.shields.io/david/nysos3/airforsteam-cli.svg)](https://david-dm.org/nysos3/airforsteam-cli)
-[![npm](https://img.shields.io/npm/dm/airforsteam.svg?maxAge=2592000)]()
+[![npm](https://img.shields.io/npm/dm/airforsteam.svg?maxAge=2592000)](https://www.npmjs.com/package/airforsteam)
 
 > An unofficial Air-for-Steam CLI with interactive configuration and updating of the Air-for-Steam skin
 
