@@ -21,6 +21,9 @@
     "lib",
     "lib-es5"
   ],
+  "bin": {
+    "airforsteam": "bin/airforsteam.js"
+  },
   "main": "index.js",
   "scripts": {
     "commit": "standard-commit",
