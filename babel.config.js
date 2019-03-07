@@ -1,15 +1,33 @@
 module.exports = {
-  presets: [
-    [
-      '@babel/preset-env',
-      {
-        targets: {
-          node: 'current',
+  overrides: [{
+    test: './lib',
+    presets: [
+      [
+        '@babel/env',
+        {
+          modules: 'commonjs',
         },
-      },
+      ],
     ],
-  ],
-  plugins: [
-    'transform-runtime',
-  ],
+    plugins: [
+      [
+        '@babel/transform-runtime',
+        {
+          corejs: false,
+          helpers: true,
+          regenerator: true,
+          useESModules: false,
+        },
+      ],
+    ],
+  }],
 }
+
+// module.exports = {
+//   presets: [
+//     '@vue/app',
+//   ],
+//   plugins: [
+
+//   ],
+// }

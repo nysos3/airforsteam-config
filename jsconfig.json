@@ -13,6 +13,6 @@
     "node_modules"
   ],
   "include": [
-    "lib/**/*"
+    "lib/**/*", "lib/.babelrc.js"
   ]
 }
