@@ -2,13 +2,13 @@
   "name": "airforsteam",
   "version": "2.0.0",
   "description": "An unofficial Air-for-Steam CLI with interactive configuration and updating of the Air-for-Steam skin",
-  "homepage": "https://github.com/nysos3/airforsteam-cli",
+  "homepage": "https://github.com/nysos3/airforsteam-config",
   "bugs": {
-    "url": "https://github.com/nysos3/airforsteam-cli/issues"
+    "url": "https://github.com/nysos3/airforsteam-config/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/nysos3/airforsteam-cli.git"
+    "url": "https://github.com/nysos3/airforsteam-config.git"
   },
   "license": "CC-BY-NC-4.0",
   "author": {
