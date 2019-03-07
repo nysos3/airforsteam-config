@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.0-0"></a>
+# [2.0.0-0](https://github.com/nysos3/airforsteam-cli/compare/v1.1.0...v2.0.0-0) (2019-03-07)
+
+
+### Features
+
+* **gui:** initial version of a GUI for configuration ([cb16ed4](https://github.com/nysos3/airforsteam-cli/commit/cb16ed4))
+
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/nysos3/airforsteam-cli/compare/v1.0.1...v1.1.0) (2019-02-23)
 
