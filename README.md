@@ -20,6 +20,8 @@ Also, copying files on mac is awful.
 #### Windows
 Download and run airforsteam.Setup.X.X.X.exe
 
+>Please be aware that Windows SmartScreen will pop-up saying that the software is from an unidentified developer. This behavior is expected, as I cannot afford a $1200+ certificate for signing the apps.
+
 #### macOS
 Download airforsteam-X.X.X.dmg or airforsteam-X.X.X-mac.zip
 
