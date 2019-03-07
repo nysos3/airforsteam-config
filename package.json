@@ -27,11 +27,11 @@
   },
   "scripts": {
     "prebuild": "rimraf dist_electron",
-    "build": "./node_modules/.bin/electron-rebuild && cross-env NODE_ENV=production npm run transpile && cross-env NODE_ENV=production npm run electron:build",
+    "build": "./node_modules/.bin/electron-rebuild && npm run transpile && npm run electron:build",
     "commit": "standard-commit",
     "commitlint": "standard-commitlint",
-    "electron:build": "vue-cli-service electron:build --mac --win --linux --x64",
-    "electron:serve": "vue-cli-service electron:serve",
+    "electron:build": "cross-env NODE_ENV=production vue-cli-service electron:build --mac --win --linux --x64",
+    "electron:serve": "cross-env NODE_ENV=development vue-cli-service electron:serve",
     "postinstall": "electron-builder install-app-deps",
     "lint": "vue-cli-service lint",
     "lint:fix": "vue-cli-service lint --fix",
@@ -40,7 +40,7 @@
     "postrelease": "git push --follow-tags && npm publish",
     "release:major": "standard-version --release-as major && npm run postrelease",
     "release:minor": "standard-version --release-as minor && npm run postrelease",
-    "transpile": "npx babel lib --out-dir lib-es5",
+    "transpile": "cross-env NODE_ENV=production npx babel lib --out-dir lib-es5",
     "postuninstall": "electron-builder install-app-deps",
     "update": "npm-check --update",
     "watch": "babel lib --out-dir lib-es5 --watch"

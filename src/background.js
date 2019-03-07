@@ -1,10 +1,13 @@
 'use strict'
 
-import { app, protocol, BrowserWindow } from 'electron'
+import { app, protocol, BrowserWindow, ipcMain } from 'electron'
 import {
   createProtocol,
   installVueDevtools,
 } from 'vue-cli-plugin-electron-builder/lib'
+import initState from '../lib/utils/state'
+import config from '../lib/utils/config'
+import installSkin from '../lib/actions/reinstall-skin'
 const isDevelopment = process.env.NODE_ENV !== 'production'
 
 // Keep a global reference of the window object, if you don't, the window will
@@ -62,6 +65,19 @@ app.on('ready', async () => {
     }
   }
   createWindow()
+})
+
+ipcMain.on('install-skin', (event, options) => {
+  const cliState = initState({})
+  config.init(cliState)
+  Object.keys(options).forEach((key) => {
+    cliState.set(key, options[key])
+  })
+  installSkin(cliState).then(() => {
+    event.sender.send('skin-installed', 'yay')
+  }).catch((err) => {
+    event.sender.send('skin-install-failed', err.message)
+  })
 })
 
 // Exit cleanly on request from parent process in development mode.

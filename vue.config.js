@@ -15,6 +15,9 @@ module.exports = {
   pluginOptions: {
     electronBuilder: {
       builderOptions: {
+        mac: {
+          category: 'public.app-category.utilities',
+        },
         linux: {
           category: 'Utility',
         },

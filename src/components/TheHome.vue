@@ -9,8 +9,6 @@
   >
     <v-flex
       xs12
-      sm8
-      md4
     >
       <v-card class="elevation-12">
         <v-toolbar
@@ -48,11 +46,14 @@
               @click:append-outer="selectSteamSkinFolder"
             />
           </v-form>
-          {{ steamSkinFolder }}
         </v-card-text>
         <v-card-actions>
           <v-spacer />
-          <v-btn color="primary" @click="install">
+          <v-btn
+            color="primary"
+            :loading="installing"
+            @click="install"
+          >
             {{ cliState.firstRun ? 'Install' : 'Update' }}
           </v-btn>
         </v-card-actions>
@@ -69,7 +70,6 @@ import os from 'os'
 import path from 'path'
 import fs from 'fs'
 import { getConfigHome } from 'platform-folders'
-import execa from 'execa'
 
 export default {
   data: () => ({
@@ -79,6 +79,7 @@ export default {
       squareAvatars: [],
       steamSkinFolder: [],
     },
+    installing: false,
   }),
   computed: {
     ...mapState(['cliState']),
@@ -136,7 +137,7 @@ export default {
   },
   methods: {
     ...mapMutations(['updateTheme', 'updateColor', 'updateSquareAvatars', 'updateSteamSkinFolder']),
-    ...mapActions(['saveCliConfig']),
+    ...mapActions(['installSkin']),
     selectSteamSkinFolder () {
       let defaultPath = JSON.parse(JSON.stringify(this.steamSkinFolder))
       if (defaultPath === '') {
@@ -183,14 +184,18 @@ export default {
       if (hasError) {
         return false
       }
-      await this.saveCliConfig()
-      execa.shellSync(`node ./bin/airforsteam.js -r`)
+      this.installing = true
+      await this.installSkin()
+
       let response = 'Please restart Steam!'
 
       if (this.cliState.firstRun) {
         response = 'Don\'t forget to enable the Air-for-Steam skin in Steam > Settings > Interface > Skin'
       }
-      alert(response)
+      this.installing = false
+      this.$nextTick(() => {
+        alert(response)
+      })
     },
   },
 }

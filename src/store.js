@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import initState from '../lib/utils/state'
 import config from '../lib/utils/config'
+import { ipcRenderer } from 'electron'
 
 const cliState = initState({})
 config.init(cliState)
@@ -41,8 +42,16 @@ export default new Vuex.Store({
     },
   },
   actions: {
-    async saveCliConfig ({ state }) {
-      await config.persist(cliState)
+    installSkin ({ state }) {
+      return new Promise((resolve, reject) => {
+        ipcRenderer.on('skin-installed', (event, arg) => {
+          resolve()
+        })
+        ipcRenderer.on('skin-install-failed', (event, arg) => {
+          reject(arg)
+        })
+        ipcRenderer.send('install-skin', JSON.parse(JSON.stringify(state.cliState)))
+      })
     },
   },
 })
