@@ -69,7 +69,7 @@ import { remote } from 'electron'
 import os from 'os'
 import path from 'path'
 import fs from 'fs'
-import { getConfigHome } from 'platform-folders'
+import appData from '../../lib/utils/app-data'
 
 export default {
   data: () => ({
@@ -142,11 +142,11 @@ export default {
       let defaultPath = JSON.parse(JSON.stringify(this.steamSkinFolder))
       if (defaultPath === '') {
         if (os.type() === 'Darwin') {
-          defaultPath = path.resolve(getConfigHome(), 'Steam', 'Steam.AppBundle', 'Steam', 'Contents', 'MacOS', 'skins')
+          defaultPath = path.resolve(appData('Steam'), 'Steam.AppBundle', 'Steam', 'Contents', 'MacOS', 'skins')
         } else if (os.type() === 'Windows_NT') {
           defaultPath = 'C:\\Program Files (x86)\\Steam\\skins'
         } else if (os.type() === 'Linux') {
-          defaultPath = path.resolve(os.userInfo().homedir, '.steam/skins')
+          defaultPath = path.resolve(appData('steam'), 'skins')
         }
 
         if (!fs.existsSync(defaultPath)) {

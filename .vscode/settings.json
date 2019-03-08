@@ -17,4 +17,5 @@
     "**/lib-es5": true
   },
   "eslint.enable": true,
+  "git.enableCommitSigning": true
 }
