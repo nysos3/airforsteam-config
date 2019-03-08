@@ -26,24 +26,22 @@
     "airforsteam": "bin/airforsteam.js"
   },
   "scripts": {
-    "prebuild": "rimraf dist_electron",
+    "prebuild": "npx rimraf dist_electron",
     "build": "./node_modules/.bin/electron-rebuild && npm run transpile && npm run electron:build",
     "commit": "standard-commit",
     "commitlint": "standard-commitlint",
-    "electron:build": "cross-env NODE_ENV=production vue-cli-service electron:build --mac --win --linux --x64",
+    "electron:build": "cross-env NODE_ENV=production vue-cli-service electron:build --win --x64",
     "electron:serve": "cross-env NODE_ENV=development vue-cli-service electron:serve",
-    "postinstall": "electron-builder install-app-deps",
     "lint": "vue-cli-service lint",
     "lint:fix": "vue-cli-service lint --fix",
     "prepublishOnly": "npm run transpile",
-    "release": "standard-version --release-as patch",
+    "release": "npx standard-version --release-as patch",
     "postrelease": "git push --follow-tags && npm publish",
-    "release:major": "standard-version --release-as major && npm run postrelease",
-    "release:minor": "standard-version --release-as minor && npm run postrelease",
+    "release:major": "npx standard-version --release-as major && npm run postrelease",
+    "release:minor": "npx standard-version --release-as minor && npm run postrelease",
     "transpile": "cross-env NODE_ENV=production npx babel lib --out-dir lib-es5",
-    "postuninstall": "electron-builder install-app-deps",
-    "update": "npm-check --update",
-    "watch": "babel lib --out-dir lib-es5 --watch"
+    "update": "npx npm-check --update",
+    "watch": "npx babel lib --out-dir lib-es5 --watch"
   },
   "lint-staged": {
     "*.{js,vue}": [
@@ -87,7 +85,6 @@
     "babel-eslint": "^10.0.1",
     "cross-env": "^5.2.0",
     "electron": "^4.0.7",
-    "electron-rebuild": "^1.8.4",
     "eslint": "^5.15.1",
     "eslint-config-standard": "^12.0.0",
     "eslint-multiplexer": "^1.0.3",
