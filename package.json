@@ -19,7 +19,8 @@
   "files": [
     "bin",
     "lib",
-    "lib-es5"
+    "lib-es5",
+    "babel.config.js"
   ],
   "main": "background.js",
   "bin": {
