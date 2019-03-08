@@ -6,6 +6,11 @@ All notable changes to this project will be documented in this file. See [standa
 # [2.1.0](https://github.com/nysos3/airforsteam-config/compare/v2.0.1...v2.1.0) (2019-03-08)
 
 
+### Features
+
+* **colors:** add support for new nord color scheme ([03098d0](https://github.com/nysos3/airforsteam-config/commit/03098d0))
+
+
 
 <a name="2.0.1"></a>
 ## [2.0.1](https://github.com/nysos3/airforsteam-config/compare/v2.0.0...v2.0.1) (2019-03-08)
