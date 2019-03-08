@@ -27,7 +27,7 @@
   },
   "scripts": {
     "prebuild": "npx rimraf dist_electron",
-    "build": "./node_modules/.bin/electron-rebuild && npm run transpile && npm run electron:build",
+    "build": "npm run transpile && npm run electron:build",
     "commit": "standard-commit",
     "commitlint": "standard-commitlint",
     "electron:build": "cross-env NODE_ENV=production vue-cli-service electron:build --win --x64",
