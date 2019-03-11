@@ -3,7 +3,7 @@
 [![Dependency Status](https://img.shields.io/david/nysos3/airforsteam-config.svg)](https://david-dm.org/nysos3/airforsteam-config)
 [![npm](https://img.shields.io/npm/dm/airforsteam.svg?maxAge=2592000)](https://www.npmjs.com/package/airforsteam)
 
-> An unofficial Air-for-Steam CLI with interactive configuration and updating of the Air-for-Steam skin
+> An unofficial tool with interactive configuration and updating of the Air-for-Steam skin
 
 > For CLI usage, please see [README.CLI.md](https://github.com/nysos3/airforsteam-config/blob/master/README.CLI.md).
 
